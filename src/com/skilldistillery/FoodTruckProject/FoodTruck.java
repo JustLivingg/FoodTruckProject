@@ -3,7 +3,7 @@ package com.skilldistillery.FoodTruckProject;
 public class FoodTruck {
 //Define a FoodTruck class with fields for a unique numeric ID
 //Foodtruck {Name, Food Type, Rating.}
-
+	private int uniqueId = 0;
 	private String name;
 	private String food;
 	private double rating;
@@ -14,10 +14,12 @@ public class FoodTruck {
 		this.rating = 0.0;
 	}
 
-	public FoodTruck(String tN, String food, double r) {
+	public FoodTruck(String tN, String food, double r, int id) {
 		this.name = tN;
 		this.food = food;
 		this.rating = r;
+		this.uniqueId = id;
+		
 	}
 
 	public String getTruckName() {
@@ -45,7 +47,7 @@ public class FoodTruck {
 	}
 
 	public String toString() {
-		String output = "Truck Name: " + name + ", Food Type: " + food + ", Rating: " + rating;
+		String output = "UniqueID: " + uniqueId + ",  Truck Name: " + name + ",  Food Type: " + food + ",  Rating: " + rating;
 		return output;
 	}
 
@@ -53,5 +55,6 @@ public class FoodTruck {
 		String truckData = this.toString();
 		System.out.println(truckData);
 	}
+
 
 }
