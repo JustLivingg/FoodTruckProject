@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class FoodTruckMain {
 
 	static Scanner kb = new Scanner(System.in);
-	FoodTruck[] truckArray = new FoodTruck[5];
+	FoodTruck[] truckArray = new FoodTruck[5]; //LIMIT TO HOW MANY FOOD TRUCKS USER CAN INPUT FOR DATA.
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { //ONLY STATIC METHOD IN BOTH CLASSES
 
 		FoodTruckMain app = new FoodTruckMain();
 
@@ -19,13 +19,13 @@ public class FoodTruckMain {
 
 		boolean keepGoing = true;
 		int choice;
-		int uniqueId = 0;
+		int uniqueId = 0; //UNIQUE ID FOR EACH ARRAY
 		// User Story #1
 
 		// For Loop to add Food Trucks.
 		for (int i = 0; i < truckArray.length; i++) {
 
-			uniqueId = i + 1;
+			uniqueId = i + 1; //MAKES A UNIQUE ID FOR EACH ARRAY
 			System.out.println("Please enter Food Truck name with no spaces. ");
 			System.out.print("Or to exit enter 'Quit': ");
 			String name = kb.next();

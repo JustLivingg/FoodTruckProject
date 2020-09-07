@@ -7,19 +7,13 @@ public class FoodTruck {
 	private String name;
 	private String food;
 	private double rating;
-
-	public FoodTruck(String tN) {
-		this.name = tN;
-		this.food = null;
-		this.rating = 0.0;
-	}
-
+//constructor for FoodTruckMain class
 	public FoodTruck(String tN, String food, double r, int id) {
 		this.name = tN;
 		this.food = food;
 		this.rating = r;
 		this.uniqueId = id;
-		
+
 	}
 
 	public String getTruckName() {
@@ -47,7 +41,8 @@ public class FoodTruck {
 	}
 
 	public String toString() {
-		String output = "UniqueID: " + uniqueId + ",  Truck Name: " + name + ",  Food Type: " + food + ",  Rating: " + rating;
+		String output = "UniqueID: " + uniqueId + ",  Truck Name: " + name + ",  Food Type: " + food + ",  Rating: "
+				+ rating;
 		return output;
 	}
 
@@ -55,6 +50,5 @@ public class FoodTruck {
 		String truckData = this.toString();
 		System.out.println(truckData);
 	}
-
 
 }
