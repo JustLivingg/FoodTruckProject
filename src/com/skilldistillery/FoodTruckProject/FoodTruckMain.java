@@ -24,18 +24,18 @@ public class FoodTruckMain {
 
 		// For Loop to add Food Trucks.
 		for (int i = 0; i < truckArray.length; i++) {
-			
+
 			uniqueId = i + 1;
 			System.out.println("Please enter Food Truck name with no spaces. ");
 			System.out.print("Or to exit enter 'Quit': ");
-			String name = kb.nextLine();
+			String name = kb.next();
 			// User Story #2
 			if (name.equals("quit") || name.equals("Quit")) {
 				break;
 			}
 			// Asking user input for food type and truck rating.
 			System.out.print("Please enter food type: ");
-			String food = kb.nextLine();
+			String food = kb.next();
 			System.out.print("Please enter the food truck rating from (1-5): ");
 			double rating = kb.nextDouble();
 			System.out.println();
@@ -44,6 +44,7 @@ public class FoodTruckMain {
 			// Variable to create unique ids for foodtrucks.
 			truckArray[i] = truck;
 		}
+		// Referenced final objective in PRESD for the loop and menu.
 		while (keepGoing) {
 			printMenu();
 			System.out.print("Pick a choice from the menu: ");
@@ -86,6 +87,7 @@ public class FoodTruckMain {
 		System.out.println();
 	}
 
+//This method calls to FoodTruck class to pull the Tostring.
 	public void truckNames(FoodTruck[] name) {
 		for (int i = 0; i < name.length; i++) {
 			if (name[i] == null) {
@@ -95,7 +97,7 @@ public class FoodTruckMain {
 		}
 	}
 
-//#TODO Come back and find average rating.	
+// similar to highest rated,
 	public double averageRating(FoodTruck[] reviews) {
 		double sum = 0;
 		double average = 0;
@@ -109,10 +111,11 @@ public class FoodTruckMain {
 			}
 		}
 		average = sum / counter;
-		System.out.println("The average rating of all food trucks combined is: " + average);
+		System.out.println("The average rating of all food trucks combined is: " + String.format("%.2g%n", average));
 		return average;
 	}
 
+//Referenced min max to get highest rating. Needed t omake truck array != null) if not all 5 inputs were entered.
 	public void highestRated(FoodTruck[] truckArray) {
 
 		double max = 0;
